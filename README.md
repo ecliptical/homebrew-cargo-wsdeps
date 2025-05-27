@@ -31,6 +31,10 @@ This formula is automatically updated whenever a new release of `cargo-wsdeps` i
 
 This ensures that the Homebrew tap is always up-to-date with the latest version of `cargo-wsdeps`.
 
+## Maintenance
+
+This repository uses Dependabot to keep GitHub Actions up to date. Dependabot automatically creates pull requests to update GitHub Actions workflows to their latest versions, helping maintain security and functionality.
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
