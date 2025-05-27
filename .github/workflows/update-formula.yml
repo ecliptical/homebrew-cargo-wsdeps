@@ -1,8 +1,6 @@
 name: Update Formula
 
 on:
-  repository_dispatch:
-    types: [cargo-wsdeps-release]
   workflow_dispatch:
     inputs:
       version:
