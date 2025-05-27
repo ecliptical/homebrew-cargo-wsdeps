@@ -25,6 +25,12 @@ For more detailed usage instructions, please refer to the documentation in the `
 
 If you would like to contribute to this Homebrew tap, feel free to submit a pull request or open an issue.
 
+## Automatic Updates
+
+This formula is automatically updated whenever a new release of `cargo-wsdeps` is published.
+
+This ensures that the Homebrew tap is always up-to-date with the latest version of `cargo-wsdeps`.
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
