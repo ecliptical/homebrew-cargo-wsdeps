@@ -100,6 +100,10 @@ jobs:
           EOF
           mv Formula/cargo-wsdeps.rb.new Formula/cargo-wsdeps.rb
 
+      - name: Clean up temporary files
+        run: |
+          rm -rf tmp
+
       - name: Check for changes
         id: git_status
         run: |
@@ -127,3 +131,4 @@ jobs:
           branch: update-cargo-wsdeps-v${{ env.VERSION }}
           base: main
           delete-branch: true
+          assignees: pnehrer
