@@ -115,7 +115,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.git_status.outputs.changes == 'true'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Update formula to v${{ env.VERSION }}"
