@@ -1,0 +1,32 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - Formula/cargo-wsdeps.rb
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Get version from formula
+        id: version
+        run: |
+          VERSION=$(grep '^\s*version ' Formula/cargo-wsdeps.rb | head -1 | sed 's/.*version "\(.*\)"/\1/')
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.VERSION }}
+          name: v${{ steps.version.outputs.VERSION }}
+          body: Update cargo-wsdeps to v${{ steps.version.outputs.VERSION }}.
+          make_latest: true
