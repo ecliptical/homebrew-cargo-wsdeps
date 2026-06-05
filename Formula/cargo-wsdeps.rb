@@ -1,24 +1,24 @@
 class CargoWsdeps < Formula
   desc "Cargo subcommand for managing workspace dependencies in Rust"
   homepage "https://github.com/ecliptical/cargo-wsdeps"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/ecliptical/cargo-wsdeps/releases/download/v#{version}/cargo-wsdeps-aarch64-apple-darwin.tar.gz"
-      sha256 "0630e631d68d14b2861d612c04c0ea116ceae1d6ac7216e022ebe032841efd45"
+      sha256 "b6ec2d949dbbbdf85820dced05a1bbeb4680c0c3544df6585dfeb8cccd5f9ddb"
     end
     on_intel do
       url "https://github.com/ecliptical/cargo-wsdeps/releases/download/v#{version}/cargo-wsdeps-x86_64-apple-darwin.tar.gz"
-      sha256 "9b77eb1d8c9b9ccbe4af9143236324631ba7cf825cbc656307241db05d79f029"
+      sha256 "24612f82336d524b2b74a3c128a5bcb88f298fee484ffe57690e7c38bb1fa66b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ecliptical/cargo-wsdeps/releases/download/v#{version}/cargo-wsdeps-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "6ead191d1ce9f360f19e1c5da7a5e961847f6f91374c12fee6863e9506f350ea"
+      sha256 "ae6d14bca3ee0530f9219ec7e9539f2b48a4d7f0a71ee32163ebd2acaf78a53a"
     end
   end
 
